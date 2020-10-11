@@ -108,7 +108,7 @@ client.on('message', msg => {
             let file_name = 'https://i.imgur.com/' + images[rand] + '.jpg';
             console.log(file_name);        
           const embed =  new Discord.MessageEmbed()
-              .setTitle('Una michis salvaje !')
+              .setTitle(`Una michis salvaje aparece ante  ${msg.author}!`)
               .setColor(0x44F7BA)
               .setImage(file_name)
           msg.channel.send(embed);
@@ -133,7 +133,7 @@ client.on('message', msg => {
           let file_name = 'https://i.imgur.com/' + images[rand] + '.jpg';
           console.log(file_name);        
         const embed =  new Discord.MessageEmbed()
-            .setTitle('Una michis salvaje !')
+            .setTitle('Una Lady salvaje !')
             .setColor(0x44F7BA)
             .setImage(file_name)
         msg.channel.send(embed);
