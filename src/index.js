@@ -43,6 +43,17 @@ var options_album_info_lady = {
 
   }
 };
+//FORMATO REQUEST ALBUM INFO MOMOS
+var options_album_info_momos = {
+  'method': 'GET',
+  'url': 'https://api.imgur.com/3/album/u2yZ1Ou',
+  'headers': {
+    'Authorization': 'Client-ID 3e007d0c52b9f67'
+  },
+  formData: {
+
+  }
+};
 //FUNCION REQUEST ACCESS
 request(options_access_token, function (error, AccessTokenResponse) {
     if (error) throw new Error(error);
@@ -109,7 +120,7 @@ client.on('message', msg => {
             console.log(file_name);        
           const embed =  new Discord.MessageEmbed()
               //.setTitle(`Una michis salvaje aparece ante ${msg.author}!`)
-              .setDescription(`Una michis salvaje aparece ante ${msg.author}!`)
+              .setDescription(`Una Michis salvaje aparece ante ${msg.author}!`)
               .setColor(0x44F7BA)
               .setImage(file_name)
           msg.channel.send(embed);
@@ -135,12 +146,40 @@ client.on('message', msg => {
           let file_name = 'https://i.imgur.com/' + images[rand] + '.jpg';
           console.log(file_name);        
         const embed =  new Discord.MessageEmbed()
-            .setTitle('Una Lady salvaje !')
+            //.setTitle('Una Lady salvaje !')
+            .setDescription(`Una Lady salvaje aparece ante ${msg.author}!`)
             .setColor(0x44F7BA)
             .setImage(file_name)
         msg.channel.send(embed);
         });
 
   }
+  if (msg.content === '!momos') {
+    request(options_album_info_momos, function (error, AlbumInfoResponse) {
+        if (error) throw new Error(error);
+        //Imprime el body de la respuesta original.
+        //console.log(AlbumInfoResponse.body);
+        var AlbumInfoResponse_txt_body = AlbumInfoResponse.body;
+        //console.log(typeof(AlbumInfoResponse_txt_body));
+        var AlbumInfoResponse_JSON_body = JSON.parse(AlbumInfoResponse_txt_body);
+        //console.log(typeof(AlbumInfoResponse_JSON_body));
+        //console.log(AlbumInfoResponse_JSON_body.data.images[0].id);
+        var images = new Array();
+        for (i in AlbumInfoResponse_JSON_body.data.images) {
+          images.push(AlbumInfoResponse_JSON_body.data.images[i].id);
+        }
+        let rand = Math.floor(Math.random() * images.length) ;
+        console.log(rand);
+        let file_name = 'https://i.imgur.com/' + images[rand] + '.jpg';
+        console.log(file_name);        
+      const embed =  new Discord.MessageEmbed()
+          //.setTitle('Una Lady salvaje !')
+          .setDescription(`Un momos gordo aparece ante ${msg.author}!`)
+          .setColor(0x44F7BA)
+          .setImage(file_name)
+      msg.channel.send(embed);
+      });
+
+}
 });
 client.login('NzY0NTQyODQ2NTQzNTkzNDgz.X4HyAw.wj_znIufBoD8QzY-ARPIqupB4BI');
