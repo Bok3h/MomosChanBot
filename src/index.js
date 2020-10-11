@@ -35,7 +35,7 @@ var options_album_info_michis = {
 //FORMATO REQUEST ALBUM INFO LADY
 var options_album_info_lady = {
   'method': 'GET',
-  'url': 'https://api.imgur.com/3/album/wih2pxA',
+  'url': 'https://api.imgur.com/3/album/Ncf2uoP',
   'headers': {
     'Authorization': 'Client-ID 3e007d0c52b9f67'
   },
