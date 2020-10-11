@@ -46,7 +46,7 @@ var options_album_info_lady = {
 //FORMATO REQUEST ALBUM INFO MOMOS
 var options_album_info_momos = {
   'method': 'GET',
-  'url': 'https://api.imgur.com/3/album/u2yZ1Ou',
+  'url': 'https://api.imgur.com/3/album/f3RhVic',
   'headers': {
     'Authorization': 'Client-ID 3e007d0c52b9f67'
   },
