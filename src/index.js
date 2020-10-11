@@ -108,10 +108,11 @@ client.on('message', msg => {
             let file_name = 'https://i.imgur.com/' + images[rand] + '.jpg';
             console.log(file_name);        
           const embed =  new Discord.MessageEmbed()
-              .setTitle(`Una michis salvaje aparece ante  ${msg.author}!`)
+              .setTitle(`Una michis salvaje aparece ante ${msg.author}!`)
               .setColor(0x44F7BA)
               .setImage(file_name)
           msg.channel.send(embed);
+          console.log(`${msg.author}`)
           });
     }
     if (msg.content === '!lady') {
