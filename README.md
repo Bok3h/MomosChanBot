@@ -1,5 +1,5 @@
 # MomosChanBot
-Personal Discord Bot. Bot of personal discord. Created to display photos of your pets :poodle: :cat2: and whatever I can think of in the future.
+Personal Discord Bot. Created to display photos of your pets :poodle: :cat2: and whatever I can think of in the future.
 
 ## Commands
 List of available commands in the Bot!
