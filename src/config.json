@@ -1,0 +1,12 @@
+{
+    "refresh_token": "your-imgur-token",
+    "client_id": "your-imgur-clientid",
+    "client_secret": "your-imgur-client-secret",
+    "imgurApiUrl": "https://api.imgur.com/oauth2/token",
+    "authHeader": "your-imgur-auth-header",
+    "michisUrl": "your-album-url",
+    "ladyUrl": "your-album-url",
+    "momosUrl": "your-album-url",
+    "akiraUrl": "your-album-url",
+    "discordToken": "your-discord-token"
+}
