@@ -1,12 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-//const fs = require('fs');
 const { refresh_token, client_id, client_secret, imgurApiUrl } = require('../../src/config.json');
-//const { ApplicationCommandPermissionType } = require('discord-api-types');
-//require('../../src/functions.js')();
 let request = require('request');
-//const { imgurAccessRequest, imgurAlbumRequest } = require('../../src/index');
-//console.log(imgurAccessRequest);
-//console.log(imgurAlbumRequest);
 
 class ImgurAccessRequest {
 	constructor( apiUrl, refresh_token, client_id, client_secret){
