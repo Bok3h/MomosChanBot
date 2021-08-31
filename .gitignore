@@ -1,3 +1,4 @@
 node_modules
 procfile
-test.js
+testindex.js
+functions.js
