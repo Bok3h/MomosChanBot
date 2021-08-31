@@ -20,7 +20,6 @@ function imgurLogin (imgurAccessRequest){
     request(imgurAccessRequest, function (error, AccessTokenResponse) {
         if (error) throw new Error(error);
         imgurAccessRequest.response = JSON.parse(AccessTokenResponse.body);
-        //console.log(imgurAccessRequest);
     });
 }
 
@@ -31,7 +30,6 @@ module.exports = {
 	async execute(interaction) {
         console.log('/restart Command Used!');
 		let imgurAccessRequest = new ImgurAccessRequest(imgurApiUrl, refresh_token, client_id, client_secret);
-		//console.log(imgurAccessRequest);
         imgurLogin(imgurAccessRequest);
 		await interaction.reply('Imgur API restarted!');
 	},
